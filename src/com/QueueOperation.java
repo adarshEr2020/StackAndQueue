@@ -1,11 +1,11 @@
 package com;
 
-public class QueueOperation {
-	 Node front = null;
-	    Node rear = null;
+public class QueueOperation<T> {
+	 Node<T> front = null;
+	    Node<T> rear = null;
 
 	    public void enqueue(int item) {
-	        Node node = new Node();
+	        Node<T> node = new Node<>();
 	        node.data = item;
 	        if (front == null) {
 	            front = node;
@@ -21,7 +21,7 @@ public class QueueOperation {
 	            System.out.println("\n" + "Queue underflow");
 
 
-	        Node temp = front;
+	        Node<T> temp = front;
 	            System.out.printf("Removing %d\n", temp.data);
 	        front = front.next;
 
@@ -33,7 +33,7 @@ public class QueueOperation {
 	        if(front == null)
 	            System.out.println("Stack is Empty");
 	        else{
-	            Node temp = front;
+	            Node<T> temp = front;
 	            while (temp.next != null){
 	                System.out.print(temp.data + " ");
 	                temp = temp.next;

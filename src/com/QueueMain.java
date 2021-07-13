@@ -6,7 +6,7 @@ public class QueueMain {
 	static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        QueueOperation Queue = new QueueOperation();
+        QueueOperation<Integer> Queue = new QueueOperation<>();
 
         boolean flag = true;
 
@@ -43,5 +43,6 @@ public class QueueMain {
         int choice = input.nextInt();
 
         return choice;
+        
     }
 }
